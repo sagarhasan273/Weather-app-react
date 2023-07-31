@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", "Segoe UI", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: auto;
+  border-radius: 10px;
+}
+.box {
+  align-items: center;
+  margin: auto;
+  padding: 30px;
+  width: 800px;
+  height: 700px;
+  background-color: rgba(34, 34, 34, 0.507);
+  color: #fffcfc;
+  border-radius: 10px;
+}
+.app:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.day1 {
+  background: url("./assets/day1.jpg") no-repeat center center/cover;
+}
+.day2 {
+  background: url("./assets/day2.jpg") no-repeat center center/cover;
+}
+.day3 {
+  background: url("./assets/day3.jpg") no-repeat center center/cover;
+}
+.day4 {
+  background: url("./assets/day4.jpg") no-repeat center center/cover;
+}
+.day5 {
+  background: url("./assets/day5.jpg") no-repeat center center/cover;
+}
+.day6 {
+  background: url("./assets/day6.jpg") no-repeat center center/cover;
+}
+.day7 {
+  background: url("./assets/day7.jpg") no-repeat center center/cover;
+}
+.day8 {
+  background: url("./assets/day8.jpg") no-repeat center center/cover;
+}
+.night {
+  background: url("./assets/night.jpg") no-repeat center center/cover;
+}
+/* .night1 {
+  background: url("./assets/night1.jpg") no-repeat center center/cover;
+}
+.night2 {
+  background: url("./assets/night2.jpg") no-repeat center center/cover;
+}
+.night3 {
+  background: url("./assets/night3.jpg") no-repeat center center/cover;
+}
+.night4 {
+  background: url("./assets/night4.jpg") no-repeat center center/cover;
+}
+.night5 {
+  background: url("./assets/night5.jpg") no-repeat center center/cover;
+}
+.night6 {
+  background: url("./assets/night6.jpg") no-repeat center center/cover;
+}
+.night7 {
+  background: url("./assets/night7.jpg") no-repeat center center/cover;
+}
+.night8 {
+  background: url("./assets/night8.jpg") no-repeat center center/cover;
+} */
+
+.box .search {
+  text-align: center;
+  padding: 1rem;
+}
+
+.box input {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
+}
+
+::placeholder {
+  color: #f8f8f8;
+}
+
+.container {
+  position: relative;
+  top: 3%;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: space-between; */
+  border-radius: 25px;
+}
+
+.clock {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.box .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.box .description {
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
+}
+
+.box .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.location {
+  display: flex;
+}
+.location_name {
+  float: left;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+}
+.country_name {
+  float: left;
+  padding-left: 10px;
+}

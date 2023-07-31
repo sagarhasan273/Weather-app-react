@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 90.4464,
+        "lat": 24.1012
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 34.99,
+        "feels_like": 41.99,
+        "temp_min": 34.99,
+        "temp_max": 34.99,
+        "pressure": 1002,
+        "humidity": 62,
+        "sea_level": 1002,
+        "grnd_level": 1000
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 5.19,
+        "deg": 190,
+        "gust": 7.17
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1690278728,
+    "sys": {
+        "type": 1,
+        "id": 9145,
+        "country": "BD",
+        "sunrise": 1690241018,
+        "sunset": 1690289130
+    },
+    "timezone": 21600,
+    "id": 1337179,
+    "name": "Dhaka Division",
+    "cod": 200
+}

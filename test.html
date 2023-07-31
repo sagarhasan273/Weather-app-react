@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Read Text File</title>
+</head>
+
+<body>
+    <input type="file" id="fileInput">
+    <p id="fileContent"></p>
+
+    <script>
+        // index.js
+        document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+
+            if (!file) {
+                alert('No file selected.');
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const fileContent = event.target.result;
+                const dataMap = processData(fileContent);
+                console.log(dataMap);
+            };
+
+            reader.readAsText(file);
+        }
+
+        function processData(fileContent) {
+            const lines = fileContent.split('\n');
+            const dataMap = new Map();
+            const array = new Array();
+
+            lines.forEach((line, index) => {
+                // Assuming the data is in the format "key, value"
+
+                const [key, value] = line.trim().split(' ');
+                console.log(key, ":", `"` + value + `"`);
+                // Skip the line if it doesn't have both key and value
+                if (!key || !value) {
+                    console.warn(`Line ${index + 1} is invalid. Skipping.`);
+                    return;
+                }
+
+                // Add the key-value pair to the data map
+                dataMap.set(key, value);
+
+                array.push(key + ":" + `"` + value + `"`);
+
+            });
+            document.getElementById('fileContent').innerHTML = array;
+            console.log(array);
+            return dataMap;
+        }
+
+    </script>
+</body>
+
+</html>
